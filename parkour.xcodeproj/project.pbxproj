@@ -18,6 +18,7 @@
 		207D9DBB1C854A980066A5FE /* parkourUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207D9DBA1C854A980066A5FE /* parkourUITests.swift */; };
 		207D9DCB1C854E350066A5FE /* Obstacle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207D9DCA1C854E350066A5FE /* Obstacle.swift */; };
 		209092E61C8E648600ECE9DB /* building01.png in Resources */ = {isa = PBXBuildFile; fileRef = 209092E51C8E648600ECE9DB /* building01.png */; };
+		C5108B621CABAF9F00A9F861 /* blank.png in Resources */ = {isa = PBXBuildFile; fileRef = C5108B611CABAF9F00A9F861 /* blank.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		207D9DBC1C854A980066A5FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		207D9DCA1C854E350066A5FE /* Obstacle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Obstacle.swift; sourceTree = "<group>"; };
 		209092E51C8E648600ECE9DB /* building01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = building01.png; sourceTree = "<group>"; };
+		C5108B611CABAF9F00A9F861 /* blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blank.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		207D9D991C854A980066A5FE /* parkour */ = {
 			isa = PBXGroup;
 			children = (
+				C5108B611CABAF9F00A9F861 /* blank.png */,
 				209092E51C8E648600ECE9DB /* building01.png */,
 				205AD3911C8E6B1800A3D266 /* pengin008.png */,
 				207D9D9A1C854A980066A5FE /* AppDelegate.swift */,
@@ -244,6 +247,7 @@
 			files = (
 				207D9DA51C854A980066A5FE /* LaunchScreen.storyboard in Resources */,
 				207D9DA21C854A980066A5FE /* Assets.xcassets in Resources */,
+				C5108B621CABAF9F00A9F861 /* blank.png in Resources */,
 				209092E61C8E648600ECE9DB /* building01.png in Resources */,
 				205AD3921C8E6B1800A3D266 /* pengin008.png in Resources */,
 				207D9DA01C854A980066A5FE /* Main.storyboard in Resources */,
