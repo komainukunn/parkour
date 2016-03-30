@@ -11,12 +11,13 @@ import UIKit
 
 class MainLoop:NSObject {
     var buildings:[Obstacle] = []
+    var buildings_length:Int = 15
     
     init(mainView:UIView) {
         // Instantiate ten buildings.
-        for _ in 0...9 {
+        for i in 0...buildings_length {
             if let build:UIImage? = UIImage(named: "building01.png") {
-                let b:Obstacle = Obstacle(x:-90,
+                let b:Obstacle = Obstacle(x:(Float)(i*50),
                                           y:Float(UIScreen.mainScreen().bounds.height)-100,
                                           h:100,
                                           w:50,
@@ -28,12 +29,25 @@ class MainLoop:NSObject {
     }
     
     func update(timer : NSTimer) {
-        for i in 0...9 {
+        for i in 0...buildings_length {
             buildings[i].move()
-            if(buildings[i].xpos <= -100) {
-                buildings[i].xpos = 700 + (Float)(arc4random_uniform(300)) * (Float)(i) + 50 * (Float)(i);
+            
+            if buildings[i].xpos <= -50 {
+                
+                //２個前
+                let double_previous:Int = i-2 < 0 ? buildings_length-i : i-2
+                
+                buildings[i].change_success()
+                if buildings[double_previous].missFlg == false && (Int)(arc4random_uniform(100))%3 != 0 {
+                    buildings[i].change_miss()
+                    print("\(i) =  miss");
+                }
+                buildings[i].xpos = Float(buildings_length*50);
                 buildings[i].setHeight(50 + (Int)(arc4random_uniform(100)));
             }
         }
+    }
+    func update_b(timer : NSTimer){
+        
     }
 }

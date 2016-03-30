@@ -14,14 +14,17 @@ class Obstacle {
     var ypos:Float
     var height:Int
     var width:Int
-    let imgView:UIImageView
+    var img:UIImage
+    var imgView:UIImageView
     var speed:Float = 1.3
+    var missFlg:Bool = false
 
     init(x:Float, y:Float, h:Int, w:Int, img:UIImage) {
         self.xpos = x
         self.ypos = y
         self.height = h
         self.width = w
+        self.img = img
         self.imgView = UIImageView(image:img);
         self.imgView.frame = CGRectMake(CGFloat(x), CGFloat(y), CGFloat(w), CGFloat(h));
     }
@@ -45,5 +48,14 @@ class Obstacle {
                        CGFloat(UIScreen.mainScreen().bounds.height) - CGFloat(h),
                        CGFloat(self.width),
                        CGFloat(h));
+    }
+    func change_miss(){
+        self.imgView.image = UIImage(named:"blank.png");
+        missFlg = true
+    }
+    
+    func change_success(){
+        self.imgView.image = self.img;
+        missFlg = false
     }
 }

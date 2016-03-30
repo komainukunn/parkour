@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         
         loop = MainLoop(mainView: self.view)
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: loop, selector: #selector(MainLoop.update(_:)), userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: loop, selector:"update:", userInfo: nil, repeats: true)
     }
 
     override func didReceiveMemoryWarning() {
